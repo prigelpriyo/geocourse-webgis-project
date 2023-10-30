@@ -43,6 +43,13 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.gis',
 
+    # Leaflet
+    'leaflet',
+
+    # Crispy Forms
+    "crispy_forms",
+    "crispy_bootstrap5",
+    
     # Custom Apps
     'bikini_bottom',
 ]
@@ -145,3 +152,16 @@ if os.name == 'nt':
         VENV_BASE, 'Lib\\site-packages\\osgeo') + ';' + os.environ['PATH']
     os.environ['PROJ_LIB'] = os.path.join(
         VENV_BASE, 'Lib\\site-packages\\osgeo\\data\\proj') + ';' + os.environ['PATH']
+
+# LEAFLET SETTINGS
+LEAFLET_CONFIG = {
+    'DEFAULT_CENTER': [11.605438452713647, 165.37921715952783],
+    'DEFAULT_ZOOM': 11,
+    'MIN_ZOOM': 3,
+    'MAX_ZOOM': 18,
+    'TILES': 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
+}
+
+# CRISPY FORMS SETTINGS
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"

@@ -9,7 +9,8 @@ class Facility(models.Model):
             ('goverment', 'Pemerintahan'),
             ('public', 'Fasilitas Umum'),
             ('park', 'Taman'),
-            ('restaurant', 'Restoran')
+            ('restaurant', 'Restoran'),
+            ('perumahan', 'Perumahan')
         ]
 
         STATUS_CHOICES = [
